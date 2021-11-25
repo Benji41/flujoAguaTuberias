@@ -6,10 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="{% static 'js/script.js' %}"></script>
     <title>Flujo de agua por tuberia</title>
   </head>
   <body>
-    <h1>Hello mundo! beshito pa mi baby :**</h1>
-    <img src="{% static 'images/background.jpg' %}" alt="imagen no cargo" />
+    <br />
+    <br />
+    <br />
+    <h1>Cálculo de flujo de agua en tuberias</h1>
+    <table class="center">
+      <tr>
+        <th>Valores</th>
+        <th>Resultados</th>
+      </tr>
+      <tr>
+        <td>
+          <h2>Diametro(D):<input type="number" id="diam" /></h2>
+        </td>
+        <td>
+          <h2>
+            Radio hidraulico(Rh):<input type="number" id="radio" readonly />
+          </h2>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h2>Pendiente(S):<input type="number" id="pen" /></h2>
+        </td>
+        <td>
+          <h2>Velocidad(V):<input type="number" id="vel" readonly /></h2>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h2>Numero de rugosidad(N):<input type="number" id="rugo" /></h2>
+        </td>
+        <td>
+          <h2>Area(A):<input type="number" id="area" readonly /></h2>
+        </td>
+      </tr>
+    </table>
+    <div class="container">
+      <div class="center">
+        <button id="btn_calculo" onclick="required() ;">Calcular!</button>
+      </div>
+    </div>
+    <h2>Gasto(Q):<input type="number" id="gasto" readonly /></h2>
   </body>
 </html>
